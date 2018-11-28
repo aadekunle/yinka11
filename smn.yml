@@ -1,5 +1,5 @@
 ---
-- host
+- host: all
   become: yes
   tasks:
    - name: create directory
@@ -7,4 +7,6 @@
      
    - name: copy motd file
      copy: src=/etc/motd dest=/mnt
-  
+ 
+   - name: update system
+     yum: name='*' state=latest 
