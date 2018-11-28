@@ -1,0 +1,7 @@
+#!/bin/bash
+clear
+echo "The Lord is good">> /tmp/myfile1
+cat /tmp/myfile1
+date
+cal
+echo "DONE!"
