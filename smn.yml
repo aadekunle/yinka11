@@ -1,0 +1,10 @@
+---
+- host
+  become: yes
+  tasks:
+   - name: create directory
+     file: name=jumbo state=directory owner=root group=root mode=0755
+     
+   - name: copy motd file
+     copy: src=/etc/motd dest=/mnt
+  
